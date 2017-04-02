@@ -2,7 +2,8 @@
   Sidebar {{ name }}
   <ul>
     <li *ngFor="let item of documents">
-      <list-item type="item.type" title="item.title"></list-item>
+      <list-item type="item.type" title="item.title"
+                (click)="showChanges(item.id)"></list-item>
     </li>
   </ul>
 </div>
