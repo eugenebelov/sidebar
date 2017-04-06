@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
   selector: 'list-item',
   templateUrl: './documentList.component.html'
 })
+
 export class DocumentListItem {
   type = '-type-';
   title = '- title -'

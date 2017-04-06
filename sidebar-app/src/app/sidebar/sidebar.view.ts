@@ -1,26 +1,19 @@
 import { Component } from '@angular/core';
+import { SidebarService } from './sidebar.service';
 
 @Component({
   selector: 'sidebar',
-  templateUrl: './sidebar.view.html'
+  templateUrl: './sidebar.view.html',
+  providers: [SidebarService]
 })
-export class SidebarView {
-  name = 'OMG';
-  documents = [{
-    id: "1",
-    type: "draft",
-    title: "some title 1"
-  }, {
-    id: "2",
-    type: "review",
-    title: "some title 2"
-  }, {
-    id: "3",
-    type: "draft",
-    title: "some title 3"
-  }];
 
-  showChanges(itemId) {
+export class SidebarView {
+  constructor(private sidebarService: SidebarService) { }
+
+  name = 'OMG';
+  documents = this.sidebarService.getDocumentList();
+
+  showChangesClick(itemId) {
     console.log("show changes", itemId);
   }
 }
