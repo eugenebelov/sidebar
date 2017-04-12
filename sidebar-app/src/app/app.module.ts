@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { SidebarView } from './sidebar/sidebar.view';
-import { DocumentListItem } from './sidebar/document-list/documentList.component';
+import { DocumentListItem } from './sidebar/document-list/list.component';
 
 @NgModule({
   declarations: [
