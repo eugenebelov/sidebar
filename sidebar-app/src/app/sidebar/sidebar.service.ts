@@ -5,16 +5,19 @@ export class SidebarService {
   getDocumentList() {
     return [{
       id: "1",
+      bookmark: false,
       type: "draft",
-      title: "some title 1111"
+      title: "Document 1"
     }, {
       id: "2",
+      bookmark: true,
       type: "review",
-      title: "some title 2222"
+      title: "Document 2"
     }, {
       id: "3",
+      bookmark: true,
       type: "draft",
-      title: "some title 3333"
+      title: "Document 3"
     }]
   }
 }

@@ -1,5 +1,8 @@
 <div class="bordered-el">
-  <span class="item-bookmarked">X</span>
+  <span class="item-bookmarked">
+    {{bookmark}}
+    <input type="checkbox" name="" [value]="bookmark" [(ngModel)]="bookmark">
+  </span>
   <span class="item-type">
     {{ type }}
   </span>

@@ -7,5 +7,6 @@ import { Component, Input } from '@angular/core';
 
  export class DocumentListItem {
    @Input() type:String;
+   @Input() bookmark:Boolean;
    @Input() title:String;
  }

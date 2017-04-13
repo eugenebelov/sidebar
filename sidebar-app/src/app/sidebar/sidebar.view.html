@@ -3,6 +3,7 @@
   <ul>
     <li *ngFor="let item of documents; index as i">
       <list-item  [type]="item.type"
+                  [bookmark]="item.bookmark"
                   [title]="item.title"
                   (click)="showChangesClick(item.id)"></list-item>
     </li>
