@@ -1,9 +1,10 @@
 <div class="bordered-el">
   Sidebar {{ name }}
   <ul>
-    <li *ngFor="let item of documents">
-      <list-item type="item.type" title="item.title"
-                (click)="showChangesClick(item.id)"></list-item>
+    <li *ngFor="let item of documents; index as i">
+      <list-item  [type]="item.type"
+                  [title]="item.title"
+                  (click)="showChangesClick(item.id)"></list-item>
     </li>
   </ul>
 </div>
