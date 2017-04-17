@@ -1,0 +1,17 @@
+<div class="document-changes">
+  Changes
+
+  <div class="tabs">
+    <span>New</span>
+    <span>All</span>
+  </div>
+
+  <div>
+    <ul>
+      <li *ngIf="changes.length == 0"> No data </li>
+      <li *ngFor="let item of changes">
+        {{item}}
+      </li>
+    </ul>
+  </div>
+</div>
