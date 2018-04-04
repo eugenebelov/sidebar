@@ -1,20 +1,12 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class SidebarService {
+
+  constructor(private http: HttpClient) { }
+
   getDocumentList() {
-    return [{
-      id: "1",
-      type: "draft",
-      title: "some title 1111"
-    }, {
-      id: "2",
-      type: "review",
-      title: "some title 2222"
-    }, {
-      id: "3",
-      type: "draft",
-      title: "some title 3333"
-    }]
+    return this.http.get('http://localhost:3000/documents');
   }
 }

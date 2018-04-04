@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'list-item',
@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
 })
 
 export class DocumentListItem {
-  type: string;
-  title: string;
+  @Input() type: string;
+  @Input() title: string;
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { SidebarService } from './sidebar.service';
 
 @Component({
@@ -7,11 +7,21 @@ import { SidebarService } from './sidebar.service';
   providers: [SidebarService]
 })
 
-export class SidebarView {
+export class SidebarView implements OnInit{
   constructor(private sidebarService: SidebarService) { }
 
-  name = 'OMG';
-  documents = this.sidebarService.getDocumentList();
+  name:string = 'OMG';
+  documents:any;
+
+  ngOnInit() {
+    this.showData();
+  }
+
+  showData() {
+    this.sidebarService.getDocumentList().subscribe((data) => {
+      this.documents = data;
+    });
+  }
 
   showChangesClick(itemId) {
     console.log("show changes", itemId);
