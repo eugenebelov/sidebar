@@ -5,13 +5,15 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { SidebarView } from './sidebar/sidebar.view';
-import { DocumentListItem } from './sidebar/document-list/document-list.component';
+import { DocumentListItem } from './sidebar/document-list/list.component';
+import { DocumentChanges } from './sidebar/document-detailed/document-changes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarView,
-    DocumentListItem
+    DocumentListItem,
+    DocumentChanges
   ],
   imports: [
     BrowserModule,
