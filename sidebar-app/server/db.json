@@ -1,0 +1,23 @@
+{
+  "documents": [{
+      "id": "1",
+      "type": "draft",
+      "title": "some title 1111"
+    }, {
+      "id": "2",
+      "type": "review",
+      "title": "some title 2222"
+    }, {
+      "id": "3",
+      "type": "draft",
+      "title": "some title 3333"
+    }],
+  "posts": [
+    { "id": 1, "title": "json-server", "author": "typicode" },
+    { "id": 1, "title": "json-server", "author": "typicode" }
+  ],
+  "comments": [
+    { "id": 1, "body": "some comment", "postId": 1 }
+  ],
+  "profile": { "name": "typicode" }
+}
