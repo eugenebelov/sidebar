@@ -1,18 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 import { SidebarService } from './sidebar.service';
 
+interface Documents {
+    id: number;
+    type: string;
+    title: string;
+}
+
 @Component({
   selector: 'sidebar',
   templateUrl: './sidebar.view.html',
-  styleUrls: ['sidebar.style.css'],
+  styleUrls: ['./sidebar.style.scss'],
   providers: [SidebarService]
 })
 
 export class SidebarView implements OnInit{
   constructor(private sidebarService: SidebarService) { }
 
-  name:string = 'OMG';
-  documents:any;
+  name:string = 'Documents';
+  documents:Documents[];
 
   ngOnInit() {
     this.showData();
@@ -20,7 +26,7 @@ export class SidebarView implements OnInit{
 
   showData() {
     this.sidebarService.getDocumentList().subscribe((data) => {
-      this.documents = data;
+      this.documents = data as Documents[];
     });
   }
 

@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
+import { SidebarMaterialModule } from './material/material.module';
 import { AppComponent } from './app.component';
 import { SidebarView } from './sidebar/sidebar.view';
 import { DocumentListItem } from './sidebar/document-list/list.component';
@@ -18,7 +19,8 @@ import { DocumentChanges } from './sidebar/document-detailed/document-changes.co
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    SidebarMaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
